@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<title>love calculator</title>
+	<style type="text/css">
+		body{
+			background-image:  url('love.jpg');
+			background-repeat: no-repeat;
+			background-size:1380px 750px;
+			background-position: center;
+			width:100%;
+			height:100vh;
+			position: relative;
+
+		}
+		header{
+			width:100%;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+		}
+		.margin
+		{
+			float:right;
+		}
+		.margin1
+		{
+			margin-left: 110px;
+
+		}
+		
+	</style>
+</head>
+<body>
+<header>
+	<div class="card w-50  margin">
+		<div class="card-header bg-danger text-wide text-center">LOVE CALCULATOR by Solanki</div>
+		<div class="card-body">
+			<form class="form-inline w-75 m-auto">
+				<div class="form-group">
+					<input type="text" name="" class="form-control  text-center" placeholder="Your Name " id="name"></div>
+				<div><span class="pl-4 pr-4"> + </span></div>
+				<div class="form-group">
+					<input type="text" name="" class="form-control text-center" placeholder="Love Name" id="lname">
+				</div>	
+			</form>
+			<br>
+			<div class="w-75 m-auto">
+				<button class="btn btn-success w-50 margin1" onclick="checklove()">Calculte</button>
+			</div>
+			<br>
+			<div>
+					<input type="" name="" id="lovevalue" class="form-control text-center w-25 m-auto" placeholder="Love Percentage">
+				</div>
+		</div>
+		<div class="card-footer text-center">God Bless Your Relationship</div>
+		
+	</div>
+</header>
+<script>
+	
+	function checklove(){
+		var name = document.getElementById('name').value;
+	var lname = document.getElementById('lname').value;
+	if(name=="")
+	{
+		alert("please enter your name");
+	}
+	else if(name.length<=2)
+	{
+		alert("length of name must be greater than two ");
+	}
+	else if(!isNaN(name))
+	{
+		alert("Numbers are not allowed");
+	}else
+	if(lname=="")
+	{
+		alert("please enter Love name");
+	}
+	else if(lname.length<=2)
+	{
+		alert("length of name must be greater than two ");
+	}
+	else if(!isNaN(lname))
+	{
+		alert("Numbers are not allowed");
+	}else{
+		var lovedata = Math.random()*100;
+		lovedata = Math.floor(lovedata);
+		document.getElementById('lovevalue').value=lovedata + "%";
+	}
+
+	}
+</script>
+</body>
+</html>
